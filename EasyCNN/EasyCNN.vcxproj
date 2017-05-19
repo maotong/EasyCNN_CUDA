@@ -23,7 +23,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -91,11 +91,11 @@
     <ClInclude Include="InputLayer.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="LossFunction.h" />
+    <ClInclude Include="mnistDataLoader.h" />
     <ClInclude Include="NetWork.h" />
     <ClInclude Include="ParamBucket.h" />
     <ClInclude Include="PoolingLayer.h" />
     <ClInclude Include="SoftmaxLayer.h" />
-    <ClInclude Include="TestPrint.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ActivationLayer.cpp" />
@@ -106,11 +106,11 @@
     <ClCompile Include="FullconnectLayer.cpp" />
     <ClCompile Include="InputLayer.cpp" />
     <ClCompile Include="LossFunction.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="NetWork.cpp" />
     <ClCompile Include="ParamBucket.cpp" />
     <ClCompile Include="PoolingLayer.cpp" />
     <ClCompile Include="SoftmaxLayer.cpp" />
-    <ClCompile Include="TestPrint.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
