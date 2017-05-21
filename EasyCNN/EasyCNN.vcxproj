@@ -107,6 +107,7 @@
     <ClCompile Include="InputLayer.cpp" />
     <ClCompile Include="LossFunction.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="minstDataLoader.cpp" />
     <ClCompile Include="NetWork.cpp" />
     <ClCompile Include="ParamBucket.cpp" />
     <ClCompile Include="PoolingLayer.cpp" />
