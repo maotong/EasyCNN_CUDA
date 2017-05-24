@@ -1,23 +1,10 @@
-
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
-
-#include <cstdio>
-#include <cstdlib>
-#include <cmath>
-#include <ctime>
-#include <cfloat>
-
-#include <iostream>
-#include <memory>
-#include <algorithm>
-#include <vector>
-#include <random>
-#include <sstream>
 
 #include <cublas_v2.h>
 #include <cudnn.h>
 
+#include "standard.h"
 #include "readubyte.h"
 
 // Definition and helper utilities

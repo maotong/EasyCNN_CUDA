@@ -30,6 +30,7 @@
   <ItemGroup>
     <ClInclude Include="kernel.cuh" />
     <ClInclude Include="readubyte.h" />
+    <ClInclude Include="standard.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="readubyte.cpp" />

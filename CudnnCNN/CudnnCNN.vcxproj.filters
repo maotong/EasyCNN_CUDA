@@ -19,4 +19,15 @@
       <Filter>data</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="kernel.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="readubyte.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kernel.cuh" />
+    <ClInclude Include="readubyte.h" />
+    <ClInclude Include="standard.h" />
+  </ItemGroup>
 </Project>
