@@ -76,7 +76,7 @@ void SavePGMFile(const unsigned char *data, size_t width, size_t height, const c
 
 // Application parameters
 DEFINE_int32(gpu, 0, "The GPU ID to use");
-DEFINE_int32(iterations, 10000, "Number of iterations for training");
+DEFINE_int32(iterations,20000, "Number of iterations for training");
 DEFINE_int32(random_seed, -1, "Override random seed (default uses std::random_device)");
 DEFINE_int32(classify, -1, "Number of images to classify to compute error rate (default uses entire test set)");
 

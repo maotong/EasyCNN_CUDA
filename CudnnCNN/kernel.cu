@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	size_t width, height, channels = 1;
 
 	// 读取Mnist训练集及测试集数据
-	printf("读取输入数据...\n");
+	printf("Read Input Data...\n");
 
 	// 读取数据集大小
 	size_t train_size = ReadUByteDataset(
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 	if (ReadUByteDataset(FLAGS_test_images.c_str(), FLAGS_test_labels.c_str(), &test_images[0], &test_labels[0], width, height) != test_size)
 		return 3;
 
-	printf("Mnist训练集图片数量: %d, Mnist测试集图片数量: %d\n", (int)train_size, (int)test_size);
+	printf("Mnist train dataset: %d, Mnist test dataset: %d\n", (int)train_size, (int)test_size);
 	printf("Batch size: %lld, iterations: %d\n", FLAGS_batch_size, FLAGS_iterations);
 
 	// Choose GPU
