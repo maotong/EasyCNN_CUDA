@@ -200,6 +200,7 @@ int main(int argc, char **argv)
 	if (context.m_workspaceSize > 0)
 		checkCudaErrors(cudaMalloc(&d_cudnn_workspace, context.m_workspaceSize));
 
+	printf("Copy initial network to device...\n");
 	// Copy initial network to device
 	// 将初始化的网络加载到显卡显存上
 	checkCudaErrors(cudaMemcpyAsync(d_pconv1, &conv1.pconv[0], sizeof(float)* conv1.pconv.size(), cudaMemcpyHostToDevice));
@@ -214,8 +215,8 @@ int main(int argc, char **argv)
 	// Fill one-vector with ones
 	FillOnes << <RoundUp(context.m_batchSize, BW), BW >> >(d_onevec, context.m_batchSize);
 
-	printf("准备将数据集加载到显存...\n");
-
+	
+	printf("Training...\n");
 	// Normalize training set to be in [0,1]
 	// 载入训练数据
 	std::vector<float> train_images_float(train_images.size()), train_labels_float(train_size);
@@ -224,8 +225,6 @@ int main(int argc, char **argv)
 
 	for (size_t i = 0; i < train_size; ++i)
 		train_labels_float[i] = (float)train_labels[i];
-
-	printf("训练中...\n");
 
 	// 使用随机梯度下降的方法训练网络
 	checkCudaErrors(cudaDeviceSynchronize());
